@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Unbounded1";
+  src: url(./Unbounded-Bold.ttf);
+  font-weight: 500;
+}
+.contact {
+  margin-bottom: 60px;
+}
+.contact .contact-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 150px;
+  background: radial-gradient(58.39% 328.01% at 51.32% 69.21%, #3DA0FC 0%, rgba(2, 227, 214, 0.2) 100%);
+  border-radius: 20px;
+}
+.contact .contact-box .contact-inputs {
+  position: relative;
+  width: 100%;
+  max-width: 484px;
+  border-radius: 8px;
+  padding: 32px 24px;
+  padding-bottom: 32px;
+  background-color: #FFFFFF;
+}
+.contact .contact-box .contact-inputs .contact-inputs_title {
+  width: 100%;
+}
+.contact .contact-box .contact-inputs .contact-inputs_title h4 {
+  width: 100%;
+  font-family: "Unbounded1";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  padding-bottom: 20px;
+}
+.contact .contact-box .contact-inputs .contact-inputs_items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact .contact-box .contact-inputs .contact-inputs_items input {
+  text-indent: 30px;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  background-color: #F2F2F2;
+}
+.contact .contact-box .contact-inputs .contact-inputs_items input::-moz-placeholder {
+  font-size: 18px;
+}
+.contact .contact-box .contact-inputs .contact-inputs_items input::placeholder {
+  font-size: 18px;
+}
+.contact .contact-box .contact-inputs .contact-inputs_btn {
+  padding-top: 48px;
+  width: 100%;
+}
+.contact .contact-box .contact-inputs .contact-inputs_btn button {
+  width: 100%;
+  border-radius: 8px;
+  height: 48px;
+  background: #242825;
+  border: none;
+}
+.contact .contact-box .contact-inputs .contact-inputs_btn button:hover {
+  background-color: rgba(61, 61, 249, 0.643);
+}
+.contact .contact-box .contact-inputs .contact-inputs_btn button {
+  cursor: pointer;
+  font-family: "Unbounded", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.contact .contact-box .contact-img {
+  position: relative;
+}
+.contact .contact-box .contact-img img {
+  z-index: -1;
+  position: absolute;
+  top: -25px;
+  right: -150px;
+}
+
+@media (max-width: 1100px) {
+  .contact {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 4;
+  }
+  .contact .contact-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 32px 50px;
+    background: radial-gradient(58.39% 328.01% at 51.32% 69.21%, #3DA0FC 0%, rgba(2, 227, 214, 0.2) 100%);
+    border-radius: 20px;
+  }
+  .contact .contact-box .contact-inputs {
+    position: relative;
+    width: 100%;
+    max-width: 484px;
+    border-radius: 8px;
+    padding: 32px 24px;
+    padding-bottom: 32px;
+    background-color: #FFFFFF;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_title {
+    width: 100%;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_title h4 {
+    width: 100%;
+    font-family: "Unbounded", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    padding-bottom: 20px;
+    color: var(--main-color);
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_items input {
+    text-indent: 30px;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_items input::-moz-placeholder {
+    font-size: 18px;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_items input::placeholder {
+    font-size: 18px;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_btn {
+    padding-top: 48px;
+    width: 100%;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_btn button {
+    width: 100%;
+    border-radius: 8px;
+    height: 48px;
+    background-color: var(--main-color);
+    border: none;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_btn button:hover {
+    background-color: rgba(61, 61, 249, 0.643);
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_btn button {
+    cursor: pointer;
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  .contact .contact-box .contact-img {
+    display: none;
+  }
+}
+@media (max-width: 530px) {
+  .contact {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 4;
+  }
+  .contact .contact-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 50px;
+    background: radial-gradient(58.39% 328.01% at 51.32% 69.21%, #3DA0FC 0%, rgba(2, 227, 214, 0.2) 100%);
+    border-radius: 20px;
+  }
+  .contact .contact-box .contact-inputs {
+    position: relative;
+    width: 100%;
+    max-width: 484px;
+    border-radius: 8px;
+    padding: 32px 24px;
+    padding-bottom: 32px;
+    background-color: #FFFFFF;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_title {
+    width: 100%;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_title h4 {
+    width: 100%;
+    font-family: "Unbounded", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 40px;
+    padding-bottom: 20px;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_items input {
+    text-indent: 30px;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_items input::-moz-placeholder {
+    font-size: 16px;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_items input::placeholder {
+    font-size: 16px;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_btn {
+    padding-top: 48px;
+    width: 100%;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_btn button {
+    width: 100%;
+    border-radius: 8px;
+    height: 48px;
+    background-color: var(--main-color);
+    border: none;
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_btn button:hover {
+    background-color: rgba(61, 61, 249, 0.643);
+  }
+  .contact .contact-box .contact-inputs .contact-inputs_btn button {
+    cursor: pointer;
+    font-family: "Unbounded", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  .contact .contact-box .contact-img {
+    position: relative;
+    z-index: -1;
+    display: none;
+  }
+  .contact .contact-box .contact-img img {
+    z-index: -1;
+    position: absolute;
+    top: -4px;
+    right: -200px;
+  }
+}/*# sourceMappingURL=contact.css.map */

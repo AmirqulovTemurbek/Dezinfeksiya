@@ -1,28 +1,27 @@
 import Logo from "../images/Logo.png";
 import React, { useState }  from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-
+import { useTranslation } from 'react-i18next';
 import { FaTimes, FaBars} from "react-icons/fa";
 import "../scss/main.css";
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
 
- const toggleMenu = () => {
-   setShowMenu(!showMenu);
- };
+    const toggleMenu = () => {
+    setShowMenu(!showMenu);
+    };
 
-//   const closeMenuOnMobile = () => {
-//     if (window.innerWidth <= 1150) {
-//       setShowMenu(false);
-//     }
-//   };
+    const {t, i18n} = useTranslation();
 
+    const handleChangeLanguage =(e)=>{
+        i18n.changeLanguage(e.target.value)
+    }
         return(
             <header className="header container">
                 <navbar className="nav">
                     <a to="/" className="nav__logo">
-                     <img src={Logo} alt="Logo" />
+                        <img src={Logo} alt="Logo" />
                     </a>
                     <div className={`nav__menu `} id="nav-menu">
                         <ul className={`  ${showMenu ? "show-menu" : "nav__list"}`} id="nav__list" >
@@ -43,9 +42,10 @@ const Navbar = () => {
                         </ul>
                         <div>
                             <div className="dark-div"></div>
-                            <select className="lang_option">
-                                <option className="lang_option" value="rus">Русский</option>
-                                <option className="lang_option" value="uzb">Узбекча</option>
+                            <select className="lang_option" onChange={handleChangeLanguage}>
+                                <option className="lang_option" value="ru">Русский</option>
+                                <option className="lang_option" value="uz">Узбекча</option>
+                                
                             </select>
                             <button className="open_menu" onClick={toggleMenu}><FaBars/></button>
                             <button className="btn custom-btn">Богланиш</button>
