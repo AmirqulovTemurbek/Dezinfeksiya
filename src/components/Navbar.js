@@ -1,5 +1,5 @@
 import Logo from "../images/Logo.png";
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useTranslation } from 'react-i18next';
 import { FaTimes, FaBars} from "react-icons/fa";
@@ -17,9 +17,25 @@ const Navbar = () => {
     const handleChangeLanguage =(e)=>{
         i18n.changeLanguage(e.target.value)
     }
+
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
+      });
+    
+           
+    const isSticky = (e) => {
+        const header = document.querySelector('.header-section');
+        const scrollTop = window.scrollY;
+        scrollTop >= 150 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+    };
+
+
         return(
-            <header className="header container">
-                <navbar className="nav">
+            <header className="header header-section ">
+                <navbar className="nav container">
                     <a to="/" className="nav__logo">
                         <img src={Logo} alt="Logo" />
                     </a>
@@ -27,39 +43,27 @@ const Navbar = () => {
                         <ul className={`  ${showMenu ? "show-menu" : "nav__list"}`} id="nav__list" >
                             <button className="close_menu" onClick={toggleMenu}><FaTimes/></button>
                             <li className="nav__item">
-                                <a href="#" className="nav__link">Асосий</a>
+                                <a href="#" className="nav__link">{t("nav.home")}</a>
                             </li>
                             <li className="nav__item">
-                                <a href="#about" className="nav__link">Биз ҳақимизда</a>
+                                <a href="#about" className="nav__link about">{t("nav.about")}</a>
                             </li>
                             <li className="nav__item">
-                                <a href="#services" className="nav__link">Хизматлар</a>
+                                <a href="#services" className="nav__link">{t("nav.services")}</a>
                             </li>
                             <li className="nav__item">
-                                <a href="#" className="nav__link">ФАҚ</a>
+                                <a href="#" className="nav__link">{t("nav.faq")}</a>
                             </li>
-                            <button className="btn nav_list_btn">Богланиш</button>
+                            <button className="btn nav_list_btn">{t("nav.nav-btn")}</button>
                         </ul>
-                        <div>
-                            <div className="dark-div"></div>
-                            <select className="lang_option" onChange={handleChangeLanguage}>
-                                <option className="lang_option" value="ru">Русский</option>
-                                <option className="lang_option" value="uz">Узбекча</option>
-                                
-                            </select>
-                            <button className="open_menu" onClick={toggleMenu}><FaBars/></button>
-                            <button className="btn custom-btn">Богланиш</button>
-                        </div>
-                        
-                        
-                        {/* <div className="nav__close" id="nav-close">
-                            <FaTimes/>
-                        </div> */}
+                        <div className="dark-div"></div>
+                        <select className="lang_option" onChange={handleChangeLanguage}>
+                            <option className="lang_option" value="uz">Узбекча</option>
+                            <option className="lang_option" value="ru">Русский</option>         
+                        </select>
+                        <button className="open_menu" onClick={toggleMenu}><FaBars/></button>
+                        <button className="btn custom-btn">{t("nav.nav-btn")}</button>
                     </div>
-                    {/* <div className="nav__toggle" id="nav-toggle" >
-                        <FaBars />
-                    </div> */}
-
                 </navbar>
             </header>
 
